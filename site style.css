@@ -1,0 +1,308 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 5%;
+}
+
+nav ul li {
+    display: inline-block;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 8px;
+    border-radius: 20px;
+    font-family: 'Dongle', sans-serif;
+}
+
+nav ul li a:hover {
+    box-shadow: 2px 2px 1px rgba(187, 187, 187, 0.974);
+    border-top: 0.1px solid rgb(163, 163, 163);
+    border-left: 0.1px solid rgb(163, 163, 163);
+    transition: all 0.4s ease 0s;
+    background-color: rgba(41, 41, 252, 0.933);
+    color: white;
+}
+
+nav ul li a.active {
+    box-shadow: 2px 2px 1px rgba(187, 187, 187, 0.974);
+    border-top: 0.1px solid rgb(163, 163, 163);
+    border-left: 0.1px solid rgb(163, 163, 163);
+    transition: all 0.4s ease 0s;
+    background-color: rgba(41, 41, 252, 0.933);
+    color: white;
+}
+
+div .logo {
+    margin-right: auto;
+}
+
+.learning {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 5%;
+}
+
+.learning::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.info {
+    line-height: 25px;
+    width: 700px;
+    word-wrap: wrap;
+    margin: 30px 0;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.teach {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5%;
+}
+
+.teach::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.teach__info {
+    line-height: 25px;
+    width: 700px;
+    word-wrap: wrap;
+    margin: 30px 0;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.certificate {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5%;
+    border-style: hidden;
+}
+
+.certificate::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+.certificate__info {
+    line-height: 25px;
+    width: 700px;
+    word-wrap: wrap;
+    margin: 30px 0;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.background {
+    background: url('images/background.jpg') no-repeat center center / cover;
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.background:before {
+    position: absolute;
+    content: '';
+    background-color: rgba(245, 245, 245, 0.946);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+nav .menu-btn i {
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+    height: 50px;
+    padding: 15px;
+    background-color: rgba(182, 181, 181, 0.72);
+    box-shadow: -3px -3px 5px rgba(187, 187, 187, 0.974);
+}
+
+footer ul {
+    padding: 25px;
+}
+
+footer ul li {
+    display: inline-block;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    width: 21px;
+    display: block;
+    padding: 8px;
+    border-radius: 20px;
+}
+
+span {
+    margin: auto;
+}
+
+footer ul li a:hover {
+    color: white;
+    background-color: black;
+    transition: all 0.6s ease 0s;
+}
+
+@media (max-width: 1000px) {
+    nav {
+        padding: 0 40px 0 50px;
+    }
+}
+
+@media (max-width:920px) and (min-width:736px) {
+    nav .menu-btn i {
+        display: block;
+        padding-top: 40px;
+    }
+    #click:checked~.menu-btn i:before {
+        content: "\f00d";
+    }
+    nav ul {
+        position: fixed;
+        top: 80px;
+        right: -120%;
+        background: rgba(245, 245, 245, 0.939);
+        height: 70vh;
+        width: 60%;
+        display: block;
+        text-align: center;
+        transition: all 0.3s ease;
+        border-radius: 35px;
+        box-shadow: 3px 3px 3px 5px rgba(119, 118, 118, 0.912);
+    }
+    #click:checked~ul {
+        right: 0;
+    }
+    nav ul li {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        margin: 25px 0;
+    }
+    nav ul li a {
+        width: 90%;
+        margin-left: -100%;
+        display: block;
+        font-size: 16px;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    #click:checked~ul li a {
+        margin-left: 0px;
+    }
+    nav ul li a.active,
+    nav ul li a:hover {
+        background: rgba(41, 41, 252, 0.933);
+        color: rgb(255, 255, 255);
+    }
+}
+
+@media (max-width:735px) and (min-width:340px) {
+    nav .menu-btn i {
+        display: block;
+        padding-top: 40px;
+    }
+    #click:checked~.menu-btn i:before {
+        content: "\f00d";
+    }
+    nav ul {
+        position: fixed;
+        top: 80px;
+        right: -140%;
+        background: rgba(245, 245, 245, 0.939);
+        height: 70vh;
+        width: 60%;
+        display: block;
+        text-align: center;
+        transition: all 0.3s ease;
+        border-radius: 35px;
+        box-shadow: 3px 3px 3px 5px rgba(119, 118, 118, 0.912);
+    }
+    #click:checked~ul {
+        right: 0;
+    }
+    nav ul li {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        margin: 25px 0;
+    }
+    nav ul li a {
+        width: 90%;
+        margin-left: -100%;
+        display: block;
+        font-size: 18px;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    #click:checked~ul li a {
+        margin-left: 0px;
+    }
+    nav ul li a.active,
+    nav ul li a:hover {
+        background: rgba(41, 41, 252, 0.933);
+        color: rgb(255, 255, 255);
+    }
+    img.pic1 {
+        height: 250px;
+        width: 250px;
+    }
+    .learning {
+        flex-wrap: wrap-reverse;
+    }
+    img.pic2 {
+        height: 250px;
+        width: 250px;
+    }
+    .teach {
+        flex-wrap: wrap-reverse;
+    }
+    img.pic3 {
+        height: 250px;
+        width: 250px;
+    }
+    .certificate {
+        flex-wrap: wrap;
+    }
+    p {
+        font-size: 17px;
+    }
+}
